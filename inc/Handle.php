@@ -344,7 +344,7 @@ class DWQA_Handle {
 					$content = isset( $_POST['question-content'] ) ?  $_POST['question-content']  : '';
 					$content = apply_filters( 'dwqa_prepare_question_content', $content );
 
-					$user_id = 0;
+					$user_id = 8;
 					$is_anonymous = false;
 					if ( is_user_logged_in() ) {
 						$user_id = get_current_user_id();
@@ -420,7 +420,7 @@ class DWQA_Handle {
 							$is_anonymous = true;
 							$question_author_email = isset( $_POST['_dwqa_anonymous_email'] ) && is_email( $_POST['_dwqa_anonymous_email'] ) ? sanitize_email( $_POST['_dwqa_anonymous_email'] ) : false;
 							$question_author_name = isset( $_POST['_dwqa_anonymous_name'] ) && !empty( $_POST['_dwqa_anonymous_name'] ) ? sanitize_text_field( $_POST['_dwqa_anonymous_name'] ) : false;
-							$user_id = 0;
+							$user_id = 8;
 						}
 					}
 
