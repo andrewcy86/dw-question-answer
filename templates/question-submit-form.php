@@ -49,14 +49,10 @@
 		</p>
 		<?php if ( dwqa_current_user_can( 'post_question' ) && !is_user_logged_in() ) : ?>
 		<p>
-			<label for="_dwqa_anonymous_email"><?php _e( 'Your Email', 'dwqa' ) ?></label>
-			<?php $email = isset( $_POST['_dwqa_anonymous_email'] ) ? sanitize_email( $_POST['_dwqa_anonymous_email'] ) : ''; ?>
-			<input type="email" class="" name="_dwqa_anonymous_email" value="<?php echo $email ?>" >
+				<input type="hidden" class="" name="_dwqa_anonymous_email" value="anonymous@epa.gov" >
 		</p>
 		<p>
-			<label for="_dwqa_anonymous_name"><?php _e( 'Your Name', 'dwqa' ) ?></label>
-			<?php $name = isset( $_POST['_dwqa_anonymous_name'] ) ? sanitize_text_field( $_POST['_dwqa_anonymous_name'] ) : ''; ?>
-			<input type="text" class="" name="_dwqa_anonymous_name" value="<?php echo $name ?>" >
+				<input type="hidden" class="" name="_dwqa_anonymous_name" value="Anonymous" >
 		</p>
 		<?php endif; ?>
 		<?php wp_nonce_field( '_dwqa_submit_question' ) ?>
