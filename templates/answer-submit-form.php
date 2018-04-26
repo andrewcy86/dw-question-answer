@@ -17,16 +17,8 @@
 		<?php dwqa_load_template( 'captcha', 'form' ); ?>
 
 		<?php if ( dwqa_current_user_can( 'post_answer' ) && !is_user_logged_in() ) : ?>
-		<p>
-			<label for="user-email"><?php _e( 'Your Email', 'dwqa' ) ?></label>
-			<?php $email = isset( $_POST['user-email'] ) ? sanitize_email( $_POST['user-email'] ) : ''; ?>
-			<input type="email" class="" name="user-email" value="<?php echo $email ?>" >
-		</p>
-		<p>
-			<label for="user-name"><?php _e( 'Your Name', 'dwqa' ) ?></label>
-			<?php $name = isset( $_POST['user-name'] ) ? esc_html( $_POST['user-name'] ) : ''; ?>
-			<input type="text" class="" name="user-name" value="<?php echo $name ?>" >
-		</p>
+			<input type="hidden" class="" name="user-email" value="anonymous@epa.gov" >
+			<input type="hidden" class="" name="user-name" value="Anonymous" >
 		<?php endif; ?>
 
 		<select class="dwqa-select" name="dwqa-status">
