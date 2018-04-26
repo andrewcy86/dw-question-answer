@@ -18,7 +18,7 @@
 
 		<?php if ( dwqa_current_user_can( 'post_answer' ) && !is_user_logged_in() ) : ?>
 			<input type="hidden" class="" name="user-email" value="anonymous@epa.gov" >
-			<input type="hidden" class="" name="user-name" value="Anonymous" >
+			<input type="hidden" class="" name="user-name" value="anonymous" >
 		<?php endif; ?>
 
 		<select class="dwqa-select" name="dwqa-status">
