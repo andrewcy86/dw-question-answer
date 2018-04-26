@@ -59,7 +59,7 @@ class DWQA_Handle {
 			dwqa_add_notice( __( 'Captcha is not correct', 'dwqa' ), 'error' );
 		}
 
-		$user_id = 0;
+		$user_id = 8;
 		$is_anonymous = false;
 		if ( is_user_logged_in() ) {
 			$user_id = get_current_user_id();
