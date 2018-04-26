@@ -551,7 +551,7 @@ class DWQA_Handle {
 		if ( is_user_logged_in() ) {
 			$user_id = get_current_user_id();
 		} elseif ( dwqa_current_user_can( 'post_question' ) ) {
-			$user_id = 0;
+			$user_id = 8;
 		} else {
 			return false;
 		}
