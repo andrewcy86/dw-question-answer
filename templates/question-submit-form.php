@@ -48,12 +48,8 @@
 			<input type="text" class="" name="question-tag" value="<?php echo $tags ?>" >
 		</p>
 		<?php if ( dwqa_current_user_can( 'post_question' ) && !is_user_logged_in() ) : ?>
-		<p>
 				<input type="hidden" class="" name="_dwqa_anonymous_email" value="anonymous@epa.gov" >
-		</p>
-		<p>
 				<input type="hidden" class="" name="_dwqa_anonymous_name" value="Anonymous" >
-		</p>
 		<?php endif; ?>
 		<?php wp_nonce_field( '_dwqa_submit_question' ) ?>
 		<?php dwqa_load_template( 'captcha', 'form' ); ?>
