@@ -1,3 +1,6 @@
+.dwqa-single-question .dwqa-question .dwqa-tags {display: none;}
+.dwqa-submit-question .question-meta .input-tag {display: none;}
+
 .fixed .column-dwqa-answer{
     width: 7em;
     text-align: center;
