@@ -42,11 +42,7 @@
 				) );
 			?>
 		</p>
-		<p>
-			<label for="question-tag"><?php _e( 'Tag', 'dwqa' ) ?></label>
-			<?php $tags = isset( $_POST['question-tag'] ) ? sanitize_text_field( $_POST['question-tag'] ) : ''; ?>
-			<input type="text" class="" name="question-tag" value="<?php echo $tags ?>" >
-		</p>
+
 		<?php if ( dwqa_current_user_can( 'post_question' ) && !is_user_logged_in() ) : ?>
 				<input type="hidden" class="" name="_dwqa_anonymous_email" value="anonymous@epa.gov" >
 				<input type="hidden" class="" name="_dwqa_anonymous_name" value="anonymous" >
